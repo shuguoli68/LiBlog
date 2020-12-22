@@ -33,7 +33,74 @@
 
 <!--中间内容-->
 <div>
-    
+    <div class="m-container-small m-padded-tb-big">
+        <!--头部-->
+        <div class="ui top attached segment">
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <img src="static/images/user_ba.png" alt="" class="ui avatar image">
+                    <div class="content"><a href="#" class="ui teal headed">shuguo</a></div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>20201006
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i>125
+                </div>
+            </div>
+        </div>
+        <!--图片区域-->
+        <div class="ui attached segment">
+            <img src="static/images/user_ba.png" alt="" class="ui fluid rounded image">
+        </div>
+        <!--内容-->
+        <div class="ui attached segment m-padded-tb-large">
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label">原创</div>
+            </div>
+            <h2 class="ui center aligned header">京沪、成渝高铁部分车次可选“静音车厢”了</h2>
+            <br>
+            <div id="content" class="m-padded-lr m-padded-tb-large">
+                <p>
+                    2020年12月24日起，铁路部门在京沪高铁、成渝高铁的部分车次试点“静音车厢”服务。
+                    12月23日起，旅客通过铁路12306网站、手机App、自动售票机等渠道购买京沪高铁、成渝高铁指定车次车票时，
+                    如需提供“静音车厢”服务，可根据系统提示自愿选择购买“静音车厢”车票，“静音车厢”设在3号车厢（二等座车）。
+                    旅客乘坐“静音车厢”时，请配合遵守“静音”约定。
+                </p>
+            </div>
+            <!--标签-->
+            <div class="m-padded-lr">
+                <div class="ui basic teal left pointing label">
+                    方法论
+                </div>
+            </div>
+            <!--赞赏-->
+            <div class="ui center aligned basic segment">
+                <button id="payBtn" class="ui orange basic circular button">赞赏</button>
+            </div>
+            <div class="ui payQR flowing popup transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit !important;">
+                        <div class="image">
+                            <img src="static/images/icon_github_code.png" alt="" class="ui rounded bordered image" style="width: 100px">
+                            <div>支付宝</div>
+                        </div>
+                        <div class="image">
+                            <img src="static/images/icon_github_code.png" alt="" class="ui rounded bordered image" style="width: 100px">
+                            <div>微信</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="ui attached positive message">
+            <!--博客信息-->
+        </div>
+        <div class="ui bottom attached segment">
+            <!--留言区域-->
+        </div>
+    </div>
 </div>
 
 <!--底部-->
@@ -81,6 +148,12 @@
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide')
+    })
+
+    $('#payBtn').popup({
+        popup : $('payQR.popup'),
+        // on : 'click',
+        // position : 'bottom center'
     })
 </script>
 </body>
