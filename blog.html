@@ -78,7 +78,7 @@
             <div class="ui center aligned basic segment">
                 <button id="payBtn" class="ui orange basic circular button">赞赏</button>
             </div>
-            <div class="ui payQR flowing popup transition hidden">
+            <div id="payQR" class="ui payQR flowing popup transition hidden">
                 <div class="ui orange basic label">
                     <div class="ui images" style="font-size: inherit !important;">
                         <div class="image">
@@ -94,11 +94,30 @@
             </div>
 
         </div>
+        <!--博客信息-->
         <div class="ui attached positive message">
-            <!--博客信息-->
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ul class="list">
+                        <li>作者：shuguo</li>
+                        <li>发表时间：2020-10-12 19:45</li>
+                        <li>版权声明：自由转载-非商用-保持署名</li>
+                        <li>公众号转载：请在文末添加作者公众号二维码</li>
+                    </ul>
+                </div>
+                <div class="ui five wide column">
+                    <img src="static/images/icon_github_code.png" alt="" class="ui right floated rounded bordered image" style="width: 100px">
+                </div>
+            </div>
         </div>
+        <!--留言区域-->
         <div class="ui bottom attached segment">
-            <!--留言区域-->
+            <div class="ui teal segment">
+                
+            </div>
+            <div class="ui form">
+
+            </div>
         </div>
     </div>
 </div>
@@ -151,9 +170,9 @@
     })
 
     $('#payBtn').popup({
-        popup : $('payQR.popup'),
+        popup : $('#payQR.popup'),
         // on : 'click',
-        // position : 'bottom center'
+        position : 'bottom center'
     })
 </script>
 </body>
