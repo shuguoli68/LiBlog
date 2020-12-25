@@ -139,8 +139,13 @@
     }
     .m-padded-lr-responsive{
         padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     .m-mobile-wide {
         width: 100% !important;
+    }
+    .m-padded-lr-clear{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
