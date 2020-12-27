@@ -62,6 +62,9 @@
 .m-margin-bottom-small {
     margin-bottom: 0.5em !important;
 }
+.m-margin-left-small{
+    margin-left: 0.5em !important;
+}
 
 /*text*/
 .m-text{
