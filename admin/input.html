@@ -6,6 +6,7 @@
     <title>博客发布</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
     <link rel="stylesheet" href="../static/css/me.css">
+    <link rel="stylesheet" href="../static/lib/editormd/css/editormd.min.css">
 </head>
 <body>
 <!--导航-->
@@ -49,7 +50,36 @@
                 </div>
 
                 <div class="field">
-                    <textarea placeholder="请编辑博客内容..." name="content"></textarea>
+                    <div id="md-content" style="z-index: 1">
+                        <textarea placeholder="请编辑博客内容..." name="content" style="display: none">
+                            [TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+
+#### Editor.md directory
+
+    editor.md/
+            lib/
+            css/
+            scss/
+            tests/
+            fonts/
+            images/
+            plugins/
+            examples/
+            languages/
+            editormd.js
+            ...
+
+```html
+                        </textarea>
+                    </div>
                 </div>
 
                 <div class="two fields">
@@ -172,6 +202,7 @@
 <script crossorigin="anonymous" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" src="https://lib.baomitu.com/jquery/3.5.1/jquery.min.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.main.js"></script>-->
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<script src="../static/lib/editormd/editormd.min.js"></script>
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide')
@@ -197,6 +228,16 @@
             },
         }
     })
+    //MarkDown编辑器
+    var contenEditor;
+    $(function() {
+        contenEditor = editormd("md-content", {
+            width   : "100%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "../static/lib/editormd/lib/"
+        });
+    });
 </script>
 </body>
 </html>
