@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
-    <link rel="stylesheet" href="static/css/me.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+    <!--<link rel="stylesheet" href="../static/lib/prism/pris.css">-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>-->
 </head>
 <body>
 <!--导航-->
@@ -33,6 +35,7 @@
 
 <!--中间内容-->
 <div>
+    <!--动画效果引用  animate__animated animate__zoomIn-->
     <div class="m-container-small m-padded-tb-big">
         <!--头部-->
         <div class="ui top attached segment">
@@ -67,6 +70,8 @@
                     如需提供“静音车厢”服务，可根据系统提示自愿选择购买“静音车厢”车票，“静音车厢”设在3号车厢（二等座车）。
                     旅客乘坐“静音车厢”时，请配合遵守“静音”约定。
                 </p>
+                <!--代码高亮示例-->
+                <!--<pre><code class="language-css">p{color:red}</code></pre>-->
             </div>
             <!--标签-->
             <div class="m-padded-lr">
@@ -261,6 +266,7 @@
 <script crossorigin="anonymous" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" src="https://lib.baomitu.com/jquery/3.5.1/jquery.min.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.main.js"></script>-->
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<!--<script src="../static/lib/prism/pris.js"></script>-->
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide')
