@@ -121,6 +121,12 @@
     top: 0px;
     right: 0px;
 }
+.m-fix-rb{
+    position: fixed !important;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1 !important;
+}
 
 
 /*shadow*/
